@@ -4,16 +4,13 @@
 /* common
 /* ======================================= */
 
-.l-container {
+.main {
+	padding-top: 70px;
+}
+.container {
 	@extend %baseWidth;
+	@include mq(max-medium) {
+		width: 100%;
+	}
 }
 
-.red-star {
-	@include sprite($icon_star-red);
-}
-.yellow-star {
-	@include sprite($icon_star-yellow);
-}
-.blue-star {
-	@include sprite($icon_star-blue);
-}

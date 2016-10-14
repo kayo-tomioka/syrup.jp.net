@@ -1,212 +1,277 @@
 doctype html
 html(lang="ja")
 	head
-		meta(charset="utf-8")
-		block title
-			title 株式会社 シロップ
 		block meta
-			meta(http-equiv="X-UA-Compatible", content="IE=edge")
-			meta(name="viewport" content="width=device-width, initial-scale=1")
+			include _include/meta
+		block title
+			title 株式会社シロップ
 			meta(name="description", content="")
 			meta(property="og:title", content="株式会社 シロップ")
 			meta(property="og:url", content="http://syrup.jp.net")
 			meta(property="og:image", content="")
 			meta(property="og:description", content="")
 		block links
-			link(rel="shortcut icon" href="/share/img/favicon.ico")
-			link(rel="stylesheet", href="/share/css/bootstrap.min.css")
-			link(rel="stylesheet", href="/share/css/style.css")
+			include _include/link
 		block script_head
-			script.
-				(function(i,s,o,g,r,a,m),i[r].l=1*new Date();a=s.createElement(o),
-					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-					ga('create', 'UA-62565385-1', 'auto');
-					ga('send', 'pageview');
-	body.home(onload="initialize();")#top
+			include _include/script_head
+	body
 		block fb
-			div#fb-root
-				script.
-					(function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) return;
-						js = d.createElement(s); js.id = id;
-						js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=241775145866216";
-						fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
+			include _include/fb
 		block header
-			header
-				nav.navbar.navbar-default.navbar-fixed-top
-					div.container
-						div.navbar-header.col-md-3
-							button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
-								span.sr-only Toggle navigation
-								span.icon-bar
-								span.icon-bar
-								span.icon-bar
-							a.navbar-brand(href="#") Project name
-						div#navbar.navbar-collapse.collapse.col-md-9
-							ul.nav.navbar-nav.navbar-right
-								li.col-md-2
-									a(href="#about") ABOUT
-								li.col-md-2
-									a(href="#members") MEMBERS
-								li.col-md-2
-									a(href="#service") SERVICE
-								li.col-md-2
-									a(href="#company") COMPANY
-								li.col-md-2
-									a(href="#contact") CONTACT
-								li.col-md-2
-									a(href="#news") NEWS
+			include _include/header
 		block main
-			div.container#about
-				div.row
-					div.col-md-4
-						h2 ABOUT
-					div.col-md-8
-						p
-							strong 人と動物が健康で共生できる社会をつくる
-						p コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります
-						p  コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります コーポレートメッセージが入ります
-			div.container#members
-				h2 MEMBERS
-				div.row
-					h3 TAISUKE OKUBO
-					div.col-md-4
-						img(src="#", alt="")
-					div.col-md-8
-						p 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります
-						p 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります 大久保くんのメッセージが入ります
-						p 代表取締役社長 大久保 泰介
-				div.row
-					h3 SYUNSUKE ICHIKAWA
-					div.col-md-8
-						p 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります
-						p 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります 市川くんのメッセージが入ります
-						p 取締役 最高技術責任者 市川 俊介
-					div.col-md-4
-						img(src="#", alt="")
-				div.row
-					h3 TAKANORI SATO
-					div.col-md-4
-						img(src="#", alt="")
-					div.col-md-8
-						p 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります
-						p 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります 佐藤先生のメッセージが入ります
-						p 社外取締役 兼 獣医師 佐藤 貴紀
-				div.row
-					div.col-md-4
-						p エンジニア 山田 太郎
-					div.col-md-4
-						p デザイナー 山田 花子
-			div.container#service
-				h2 SERVICE
-				div.row
-					div.col-md-4
-						h3 PET RIBBON
-						p PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります PET RIBBONの説明が入ります
+			main.main
+				div.container#hero
+					p
+						strong 世界中の心と心をつなぐ
+						strong Bond our hearts together.
+				div.container#about
+					div.row
+						div.col-md-4
+							h2 ABOUT
+						div.col-md-8
+							h3
+								em 人が動物と共に生きる社会をつくる
+								em Make a better world through better human-animal bonding.
+							p
+								| シロップが目指す「共に生きる社会」とは、「動物が」人のために生きる社会ではありません。人が動物のために、動物が人のために生きる社会です。
+								br
+								| しかし現状は、家族として迎えた動物を捨てたり、劣悪な飼養環境に置いたり、果ては「殺処分」という、動物の命すら尊重できない社会になっています。
+								br
+								| シロップは、まず「人が」動物と正しく向き合える社会をつくり、その先の未来として、人と動物が等しく向き合い「共に生きる社会」の実現を目指します。
+				div.container#message
+					div.row
+						div.col-md-12
+							h2 MESSAGE
+					div.row
+						div.col-md-12
+							h3 代表挨拶
+							p
+								| 人と共に、家族の一員として暮らしてきたペットたち。遠い昔から変わらず、私たちに癒やしを与え、そして命の豊かさを教えてくれています。
+								br
+								| もっとペットとコミュニケーションを取り、気持ちを通い合わせることができたらいいのに……。
+								br
+								| そんな思いを込め、インターネットを使った「人と動物の心と心を近付けるサービスづくり」に取り組んでいます。
+								br
+								| 当面の課題は、殺処分問題と健康管理です。動物が大好きでペット業界に携わるすべての人たちと手を取り、人と動物の幸せな未来を目指していきます。
+					div.row
+						div.col-md-12
+							h3 社外取締役挨拶
+							p
+								| 動物は私たちの心や生活を豊かにしてくれる存在です。しかし、私たちは「人と動物の共生」において、さまざまな問題を抱えています。
+								br
+								| それらを解決するためには、動物に関わる人たちの努力だけでなく、いろいろな分野からの協力も必要です。
+								br
+								| 私はその一つが「インターネット」にあると考えています。例えばインターネットの力によって保護犬猫の譲渡が進み、たくさんの犬猫が幸せに暮らせるようになりました。
+								br
+								| こういった取り組みは他の問題解決にも生かしていけるはずです。私は獣医師の立場から、そのための取り組みを進めていきます。
+				div.container#members
+					div.row
+						div.col-md-12
+							h2 MEMBERS
+					div.row
+						div.col-md-8
+							h3 共同創業者 兼 CEO 大久保 泰介
+							p
+								| 2012年同志社大学経済学部卒。大手IT系企業にてグローバル・新卒採用プロモーション、採用戦略、財務管理会計を経験。
+								br
+								| 大学在学中に英・ロンドンでサッカーをする傍ら、ユニクロで+Jプロジェクト等のプロモーション業務に携わる。
+								br
+								| 日本において人とペットが一緒に暮らしづらい環境であることを実感し、2015年にシロップを創業。
+						div.col-md-4
+							img(src="#", alt="")
+					div.row
+						div.col-md-8
+							h3 共同創業者 兼 CTO 市川 俊介
+							p
+								| 2013年名古屋大学大学院工学研究科量子工学修士専攻卒。
+								br
+								| 大手IT系企業にて、ソーシャルゲームの企画、開発、分析、運用を経験。
+								br
+								| 大久保と共にシロップを設立、共同創業者 兼 CTOに就任。
+						div.col-md-4
+							img(src="#", alt="")
+					div.row
+						div.col-md-8
+							h3 エンジニア 渡邊 直人
+							p
+								| 2013年筑波大学大学院図書館情報メディア研究科修了。
+								br
+								| エンジニアリングの力で世界を変えるため、人間だけでなく動物にもコミットしようとシロップに参画。
+						div.col-md-4
+							img(src="#", alt="")
+					div.row
+						div.col-md-8
+							h3 ペトこと編集長 山本 恵太
+							p 2009年慶應義塾大学総合政策学部卒。2016年8月より現職。2015年より「ペトこと」の立ち上げに参画。 以前はWebメディアで編集記者、IT系企業で広報に従事。大学在学中に関わった盲導犬育成の支援活動がきっかけとなり動物好きに。
+						div.col-md-4
+							img(src="#", alt="")
+					div.row
+						div.col-md-8
+							h3 社外取締役 兼 獣医師 佐藤 貴紀
+							p
+								| 麻布大学獣医学部卒。
+								br
+								| 2007年にdogdays東京ミッドタウンクリニック副院長に就任。2008年には白金高輪動物病院院長に就任。
+								br
+								| 2011年、中央アニマルクリニックを附属病院として設立し、総院長に就任（現任）。
+								br
+								| 専門は「循環器」で、全国に約60人しかいないと言う「獣医循環器学会認定医」。
+								br
+								| 代表大久保の想いに共感し、シロップに社外取締役として参画。
+						div.col-md-4
+							img(src="#", alt="")
+					div.row
+						div.col-md-3
+							div
+								img(src="#", alt="")
+							dl
+								dt 社員犬 コルク
+								dd 保護犬出身のコーギー。2016年2月28日生まれ。大人しいようでわんぱく小僧。
+						div.col-md-3
+							div
+								img(src="#", alt="")
+							dl
+								dt 社員犬 しろまる
+								dd シュナウザーとマルチーズのMIX犬。2015年2月25日生まれ。黒いのにしろまる。2足歩行が得意な小坊主。
+						div.col-md-3
+							div
+								img(src="#", alt="")
+							dl
+								dt 社員犬 まりも
+								dd 保護県出身のシュナウザー。大人しい
+						div.col-md-3
+							div
+								img(src="#", alt="")
+							dl
+								dt 社員猫 リズモ
+								dd 埼玉の路上出身。2012年7月1日生まれ（推定）。ノルウェージャンの血が入っている気がする。
+				div.container#service
+					div.row
+						div.col-md-12
+							h2 SERVICE
+					div.row
+						div.col-md-4
+							h3 PET RIBBON
+							p
+								| 保護犬・保護猫と飼いたい人をつなぐマッチングサービス。プロフィールを入力すると、自分にぴったりの運命の犬や猫と出逢うことができます。
+								br
+								| 保護団体もかんたんに団体の活動情報を発信できたり、保護犬や保護猫の募集から譲渡までをスムーズに進めることができ、保護以外の活動をサポートします。
+								br
+								| 犬や猫のことをきちんと考えて飼い、保護犬や保護猫から飼い始めることが当たり前になる幸せな社会を実現します。
+							ul
+								li
+									a(href="#" target="_blank") Go to the Site
+						div.col-md-8
+							img(src="#", alt="")
+					div.row
+						div.col-md-4
+							h3 ペトこと
+							p
+								| 獣医をはじめ、動物に関わる専門家が執筆するメディアです。信頼ある正しい情報を発信することで、ペットが健康に長生きできる社会を実現します。
+								br
+								| 専門医への相談コーナーや、編集部オリジナルの取材記事も提供しています。
+							ul
+								li
+									a(href="#" target="_blank") Go to the Site
+						div.col-md-8
+							img(src="#", alt="")
+					div.row
+						div.col-md-4
+							h3 HONEY
+							p
+								| ペットと飼い主の思い出管理サービス。ペットとの大切な思い出写真や動画をカレンダーにまとめて保存、家族で共有、保存した写真はフォトカードの作成もできます。
+								br
+								| 他にも日々の散歩やごはんなどのライフログを管理できます。大切なペットライフが一層楽しくなります。
+							ul
+								li
+									a(href="#" target="_blank") Go to the Site
+						div.col-md-8
+							img(src="#", alt="")
+				div.container#company
+					div.row
+						div.col-md-4
+							h2 COMPANY
+						div.col-md-8
+							table
+								tr
+									th(scope="row") 社名
+									td 株式会社シロップ
+								tr
+									th(scope="row") 事業内容
+									td
+										ul
+											li ペットに関わるインターネット関連サービス
+								tr
+									th(scope="row") 設立
+									td 2015年3月23日
+								tr
+									th(scope="row") 代表者
+									td 代表取締役社長 大久保 泰介
+								tr
+									th(scope="row") 所在地
+									td 東京都渋谷区広尾3-17-7
+								tr
+									th(scope="row") 従業員数
+									td 約10名（2016年8月時点）正社員以外含む
+					div.row#access
+						div.col-md-12
+							h3 ACCESS
+							div map
+				div.container#contact
+					div.row
+						div.col-md-4
+							h2 CONTACT
+						div.col-md-8
+							div form
+				div.container#news
+					div.row
+						div.col-md-12
+							h2 NEWS
+					div.row
+						div.col-md-4
+							img(src="#", alt="")
+							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+						div.col-md-4
+							img(src="#", alt="")
+							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+						div.col-md-4
+							img(src="#", alt="")
+							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+					div.row
+						div.col-md-12
+							ul
+								li
+									a(href="news/") View All
+				div.container#media
+					div.row
+						div.col-md-12
+							h2 MEDIA COVERAGE
+					div.row
 						ul
-							li
-								a(href="#" target="_blank") Go to the Site
-					div.col-md-8
-						img(src="#", alt="")
-				div.row
-					div.col-md-4
-						h3 ペトこと
-						p ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります ペトことの説明が入ります
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+							li.col-md-3
+								img(src="#", alt="")
+				div.container#social
+					div.row
 						ul
-							li
-								a(href="#" target="_blank") Go to the Site
-					div.col-md-8
-						img(src="#", alt="")
-				div.row
-					div.col-md-4
-						h3 HONEY
-						p HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります HONEYの説明が入ります
-						ul
-							li
-								a(href="#" target="_blank") Go to the Site
-					div.col-md-8
-						img(src="#", alt="")
-			div.container#company
-				div.row
-					div.col-md-4
-						h2 COMPANY
-					div.col-md-8
-						table
-							tr
-								th(scope="row") 社名
-								td 株式会社 シロップ
-							tr
-								th(scope="row") 事業内容
-								td
-									ul
-										li ああああああああああああああああああああ
-										li いいいいいいいいいいいいいいいいいいいい
-										li うううううううううううううううううううう
-							tr
-								th(scope="row") 設立
-								td 2015年3月23日
-							tr
-								th(scope="row") 代表者
-								td 代表取締役社長 大久保 泰介
-							tr
-								th(scope="row") 所在地
-								td 東京都渋谷区広尾3-17-7 羽沢コートB1
-							tr
-								th(scope="row") 従業員数
-								td 5名（2016年10月）
-				div.row#access
-					h3 ACCESS
-					div map
-			div.container#contact
-				div.row
-					div.col-md-4
-						h2 CONTACT
-					div.col-md-8
-						div form
-			div.container#news
-				h2 NEWS
-				div.row
-					div.col-md-4
-						img(src="#", alt="")
-						p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
-					div.col-md-4
-						img(src="#", alt="")
-						p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
-					div.col-md-4
-						img(src="#", alt="")
-						p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
-				ul
-					li
-						a(href="#") View All
-			div.container#media
-				h2 MEDIA COVERAGE
-				div.row
-					ul
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-						li.col-md-3
-							img(src="#", alt="")
-			div.container#social
-				ul
-					li Facebook いいね！
-					li ツイート
+							li Facebook いいね！
+							li ツイート
 		block footer
 			footer
 				div.container
@@ -220,5 +285,4 @@ html(lang="ja")
 									a(href="#") プライバシーポリシー
 							small &copy; SYRUP, Inc.
 		block script_body
-			script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-			script(src='/share/js/bootstrap.min.js')
+			include _include/script_body

@@ -4,9 +4,14 @@
 /* header
 /* ======================================= */
 
-.l-header {
-	@extend %baseWidth;
-	h1 {
-		color: $colorBase;
-	}
+.navbar-brand {
+	height: auto;
+}
+.navbar-brand-ci {
+	width: 50%;
+	max-width: 220px;
+	height: auto;
+}
+.navbar-fixed-top .navbar-collapse {
+	max-height: none;
 }

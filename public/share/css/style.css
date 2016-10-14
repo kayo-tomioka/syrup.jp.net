@@ -1,8 +1,8 @@
 /*
  * project name
 */
-.l-container, .l-footer, .l-header {
-  width: 960px;
+.container, .l-footer {
+  max-width: 1020px;
   margin: 0 auto; }
 
 /*! normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
@@ -451,23 +451,12 @@ The `sprites` mixin generates identical output to the CSS template
 /* ======================================= */
 /* common
 /* ======================================= */
-.red-star {
-  background-image: url(/public/share/img/sprite.png);
-  background-position: 0px 0px;
-  width: 45px;
-  height: 43px; }
+.main {
+  padding-top: 70px; }
 
-.yellow-star {
-  background-image: url(/public/share/img/sprite.png);
-  background-position: -45px 0px;
-  width: 45px;
-  height: 43px; }
-
-.blue-star {
-  background-image: url(/public/share/img/sprite.png);
-  background-position: 0px -43px;
-  width: 45px;
-  height: 43px; }
+@media (max-width: 62em) {
+  .container {
+    width: 100%; } }
 
 /* ======================================= */
 /* footer
@@ -475,5 +464,13 @@ The `sprites` mixin generates identical output to the CSS template
 /* ======================================= */
 /* header
 /* ======================================= */
-.l-header h1 {
-  color: #555555; }
+.navbar-brand {
+  height: auto; }
+
+.navbar-brand-ci {
+  width: 50%;
+  max-width: 220px;
+  height: auto; }
+
+.navbar-fixed-top .navbar-collapse {
+  max-height: none; }

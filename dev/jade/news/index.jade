@@ -1,0 +1,40 @@
+doctype html
+html(lang="ja")
+	head
+		block meta
+			include ../_include/meta
+		block title
+			title 株式会社シロップ
+			meta(name="description", content="")
+			meta(property="og:title", content="株式会社 シロップ")
+			meta(property="og:url", content="http://syrup.jp.net")
+			meta(property="og:image", content="")
+			meta(property="og:description", content="")
+		block links
+			include ../_include/link
+		block script_head
+			include ../_include/script_head
+	body
+		block fb
+			include ../_include/fb
+		block header
+			include ../_include/header
+		block main
+			div.container#social
+				ul
+					li Facebook いいね！
+					li ツイート
+		block footer
+			footer
+				div.container
+					div.row
+						div.col-md-6 facebook page plugin
+						div.col-md-6 engineer blog
+					div.row
+						div.col-md-offset-6.col-md-6
+							ul
+								li
+									a(href="#") プライバシーポリシー
+							small &copy; SYRUP, Inc.
+		block script_body
+			include ../_include/script_body
