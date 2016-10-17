@@ -3,6 +3,31 @@
 /* ======================================= */
 /* footer
 /* ======================================= */
-.l-footer {
-	@extend %baseWidth;
+.footer {
+	padding-top: 40px;
+	padding-bottom: 150px;
+	background-color: #080505;
 }
+.footer-link-wrap {
+	margin-top: 20px;
+	.col-md-2 {
+		padding-left: 0;
+		text-align: right;
+		@include font-size(14px);
+	}
+}
+.footer-link {
+	margin: 0;
+	padding: 0;
+	.footer-link-item {
+		list-style-type: none;
+		a {
+			color: #ffffff;
+		}
+	}
+}
+.copyright {
+	color: #ffffff;
+	@include font-size(14px);
+}
+

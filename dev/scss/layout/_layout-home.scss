@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* ======================================= */
+/* home
+/* ======================================= */
+
+.home {
+	.main {
+		.container {
+			margin-bottom: 80px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.content-headings {
+		text-align: center;
+		padding-bottom: 40px;
+	}
+	.content-headings-left {
+	}
+	.content-headings-center {
+		margin-bottom: 60px;
+		&:before {
+			margin-right: 27px;
+			content: url(/share/img/common/share_headings_bg_01.png);
+		}
+		&:after {
+			margin-left: 27px;
+			content: url(/share/img/common/share_headings_bg_02.png);
+		}
+	}
+	.content-headings-right {
+	}
+}
+
+
+// about
+#about {
+	.content-headings {
+		padding-bottom: 50px;
+		background: url(/share/img/index/about_headings_bg_01.png) no-repeat bottom center;
+	}
+	.contents-lead {
+		margin: 0 0 40px 0;
+		padding: 0;
+		@include font-size(36px);
+		em {
+			font-style: normal;
+		}
+	}
+}
+
+// message
+#message {
+	.content-headings {
+		background: url(/share/img/index/message_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+
+// members
+#members {
+	.content-headings {
+		background: url(/share/img/index/members_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+
+// service
+#service {
+	.content-headings {
+		background: url(/share/img/index/service_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+// company
+#company {
+	.content-headings {
+		padding-bottom: 50px;
+		background: url(/share/img/index/company_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+
+// contact
+#contact {
+	.content-headings {
+		padding-bottom: 50px;
+		background: url(/share/img/index/contact_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+
+// news
+#news {
+	.content-headings {
+		background: url(/share/img/index/news_headings_bg_01.png) no-repeat bottom center;
+	}
+}
+

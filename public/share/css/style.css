@@ -1,7 +1,7 @@
 /*
  * project name
 */
-.container, .l-footer {
+.container {
   max-width: 1020px;
   margin: 0 auto; }
 
@@ -451,26 +451,134 @@ The `sprites` mixin generates identical output to the CSS template
 /* ======================================= */
 /* common
 /* ======================================= */
-.main {
-  padding-top: 70px; }
+@font-face {
+  font-family: 'intro';
+  src: url("/share/font/Intro Inline.otf"); }
+body {
+  background-color: #f8f9f9; }
 
-@media (max-width: 62em) {
-  .container {
-    width: 100%; } }
+.main {
+  padding-top: 120px;
+  margin-bottom: 40px; }
+
+.container {
+  font-size: 1rem; }
+  @media (max-width: 62em) {
+    .container {
+      width: 100%; } }
+
+.content-headings {
+  margin: 0;
+  font-family: 'intro';
+  font-size: 3rem; }
+
+.img-retina {
+  width: 100%; }
+
+.reader {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
 
 /* ======================================= */
 /* footer
 /* ======================================= */
+.footer {
+  padding-top: 40px;
+  padding-bottom: 150px;
+  background-color: #080505; }
+
+.footer-link-wrap {
+  margin-top: 20px; }
+  .footer-link-wrap .col-md-2 {
+    padding-left: 0;
+    text-align: right;
+    font-size: 0.875rem; }
+
+.footer-link {
+  margin: 0;
+  padding: 0; }
+  .footer-link .footer-link-item {
+    list-style-type: none; }
+    .footer-link .footer-link-item a {
+      color: #ffffff; }
+
+.copyright {
+  color: #ffffff;
+  font-size: 0.875rem; }
+
 /* ======================================= */
 /* header
 /* ======================================= */
 .navbar-brand {
-  height: auto; }
+  height: auto;
+  padding-right: 0; }
 
 .navbar-brand-ci {
-  width: 50%;
   max-width: 220px;
   height: auto; }
 
 .navbar-fixed-top .navbar-collapse {
   max-height: none; }
+
+.navbar-default .navbar-nav .nav-item a {
+  color: #000000; }
+
+.nav-item {
+  font-family: 'intro';
+  font-size: 1.25rem; }
+
+/* ======================================= */
+/* home
+/* ======================================= */
+.home .main .container {
+  margin-bottom: 80px; }
+  .home .main .container:last-child {
+    margin-bottom: 0; }
+.home .content-headings {
+  text-align: center;
+  padding-bottom: 40px; }
+.home .content-headings-center {
+  margin-bottom: 60px; }
+  .home .content-headings-center:before {
+    margin-right: 27px;
+    content: url(/share/img/common/share_headings_bg_01.png); }
+  .home .content-headings-center:after {
+    margin-left: 27px;
+    content: url(/share/img/common/share_headings_bg_02.png); }
+
+#about .content-headings {
+  padding-bottom: 50px;
+  background: url(/share/img/index/about_headings_bg_01.png) no-repeat bottom center; }
+#about .contents-lead {
+  margin: 0 0 40px 0;
+  padding: 0;
+  font-size: 2.25rem; }
+  #about .contents-lead em {
+    font-style: normal; }
+
+#message .content-headings {
+  background: url(/share/img/index/message_headings_bg_01.png) no-repeat bottom center; }
+
+#members .content-headings {
+  background: url(/share/img/index/members_headings_bg_01.png) no-repeat bottom center; }
+
+#service .content-headings {
+  background: url(/share/img/index/service_headings_bg_01.png) no-repeat bottom center; }
+
+#company .content-headings {
+  padding-bottom: 50px;
+  background: url(/share/img/index/company_headings_bg_01.png) no-repeat bottom center; }
+
+#contact .content-headings {
+  padding-bottom: 50px;
+  background: url(/share/img/index/contact_headings_bg_01.png) no-repeat bottom center; }
+
+#news .content-headings {
+  background: url(/share/img/index/news_headings_bg_01.png) no-repeat bottom center; }

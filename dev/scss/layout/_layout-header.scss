@@ -6,12 +6,27 @@
 
 .navbar-brand {
 	height: auto;
+	padding-right: 0;
 }
 .navbar-brand-ci {
-	width: 50%;
+	// width: 50%;
 	max-width: 220px;
 	height: auto;
 }
 .navbar-fixed-top .navbar-collapse {
 	max-height: none;
+}
+.navbar-default {
+	.navbar-nav {
+		.nav-item {
+			a {
+				color: #000000;
+			}
+		}
+	}
+}
+
+.nav-item {
+	font-family: 'intro';
+	@include font-size(20px);
 }

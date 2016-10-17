@@ -4,13 +4,45 @@
 /* common
 /* ======================================= */
 
+@font-face {
+	font-family: 'intro';
+	src: url('/share/font/Intro Inline.otf');
+}
+
+body {
+	background-color: #f8f9f9;
+}
+
 .main {
-	padding-top: 70px;
+	padding-top: 120px;
+	margin-bottom: 40px;
 }
 .container {
 	@extend %baseWidth;
+	@include font-size(16px);
 	@include mq(max-medium) {
 		width: 100%;
 	}
 }
+.content-headings {
+	margin: 0;
+	font-family: 'intro';
+	@include font-size(48px);
+}
 
+.img-retina {
+	width: 100%;
+}
+
+// reader
+.reader {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}

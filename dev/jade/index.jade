@@ -14,7 +14,7 @@ html(lang="ja")
 			include _include/link
 		block script_head
 			include _include/script_head
-	body
+	body.home
 		block fb
 			include _include/fb
 		block header
@@ -28,9 +28,9 @@ html(lang="ja")
 				div.container#about
 					div.row
 						div.col-md-4
-							h2 ABOUT
+							h2.content-headings.content-headings-left ABOUT
 						div.col-md-8
-							h3
+							h3.contents-lead
 								em 人が動物と共に生きる社会をつくる
 								em Make a better world through better human-animal bonding.
 							p
@@ -42,7 +42,7 @@ html(lang="ja")
 				div.container#message
 					div.row
 						div.col-md-12
-							h2 MESSAGE
+							h2.content-headings.content-headings-center MESSAGE
 					div.row
 						div.col-md-12
 							h3 代表挨拶
@@ -68,7 +68,7 @@ html(lang="ja")
 				div.container#members
 					div.row
 						div.col-md-12
-							h2 MEMBERS
+							h2.content-headings.content-headings-center MEMBERS
 					div.row
 						div.col-md-8
 							h3 共同創業者 兼 CEO 大久保 泰介
@@ -79,33 +79,7 @@ html(lang="ja")
 								br
 								| 日本において人とペットが一緒に暮らしづらい環境であることを実感し、2015年にシロップを創業。
 						div.col-md-4
-							img(src="#", alt="")
-					div.row
-						div.col-md-8
-							h3 共同創業者 兼 CTO 市川 俊介
-							p
-								| 2013年名古屋大学大学院工学研究科量子工学修士専攻卒。
-								br
-								| 大手IT系企業にて、ソーシャルゲームの企画、開発、分析、運用を経験。
-								br
-								| 大久保と共にシロップを設立、共同創業者 兼 CTOに就任。
-						div.col-md-4
-							img(src="#", alt="")
-					div.row
-						div.col-md-8
-							h3 エンジニア 渡邊 直人
-							p
-								| 2013年筑波大学大学院図書館情報メディア研究科修了。
-								br
-								| エンジニアリングの力で世界を変えるため、人間だけでなく動物にもコミットしようとシロップに参画。
-						div.col-md-4
-							img(src="#", alt="")
-					div.row
-						div.col-md-8
-							h3 ペトこと編集長 山本 恵太
-							p 2009年慶應義塾大学総合政策学部卒。2016年8月より現職。2015年より「ペトこと」の立ち上げに参画。 以前はWebメディアで編集記者、IT系企業で広報に従事。大学在学中に関わった盲導犬育成の支援活動がきっかけとなり動物好きに。
-						div.col-md-4
-							img(src="#", alt="")
+							img.img-retina(src="/share/img/index/members_img_okubo.png", alt="")
 					div.row
 						div.col-md-8
 							h3 社外取締役 兼 獣医師 佐藤 貴紀
@@ -120,36 +94,61 @@ html(lang="ja")
 								br
 								| 代表大久保の想いに共感し、シロップに社外取締役として参画。
 						div.col-md-4
-							img(src="#", alt="")
+							img.img-retina(src="/share/img/index/members_img_sato.png", alt="")
+					div.row
+						div.col-md-4
+							div
+								img.img-retina(src="/share/img/index/members_img_ichikawa.png", alt="")
+							h3 共同創業者 兼 CTO 市川 俊介
+							p
+								| 2013年名古屋大学大学院工学研究科量子工学修士専攻卒。
+								br
+								| 大手IT系企業にて、ソーシャルゲームの企画、開発、分析、運用を経験。
+								br
+								| 大久保と共にシロップを設立、共同創業者 兼 CTOに就任。
+						div.col-md-4
+							div
+								img.img-retina(src="/share/img/index/members_img_watanabe.png", alt="")
+							h3 エンジニア 渡邊 直人
+							p
+								| 2013年筑波大学大学院図書館情報メディア研究科修了。
+								br
+								| エンジニアリングの力で世界を変えるため、人間だけでなく動物にもコミットしようとシロップに参画。
+
+						div.col-md-4
+							div
+								img.img-retina(src="/share/img/index/members_img_yamamoto.png", alt="")
+							h3 ペトこと編集長 山本 恵太
+							p 2009年慶應義塾大学総合政策学部卒。2016年8月より現職。2015年より「ペトこと」の立ち上げに参画。 以前はWebメディアで編集記者、IT系企業で広報に従事。大学在学中に関わった盲導犬育成の支援活動がきっかけとなり動物好きに。
 					div.row
 						div.col-md-3
 							div
-								img(src="#", alt="")
+								img.img-retina(src="/share/img/index/members_img_ichikawa.png", alt="")
 							dl
 								dt 社員犬 コルク
 								dd 保護犬出身のコーギー。2016年2月28日生まれ。大人しいようでわんぱく小僧。
 						div.col-md-3
 							div
-								img(src="#", alt="")
+								img.img-retina(src="/share/img/index/members_img_ichikawa.png", alt="")
 							dl
 								dt 社員犬 しろまる
 								dd シュナウザーとマルチーズのMIX犬。2015年2月25日生まれ。黒いのにしろまる。2足歩行が得意な小坊主。
 						div.col-md-3
 							div
-								img(src="#", alt="")
+								img.img-retina(src="/share/img/index/members_img_ichikawa.png", alt="")
 							dl
 								dt 社員犬 まりも
 								dd 保護県出身のシュナウザー。大人しい
 						div.col-md-3
 							div
-								img(src="#", alt="")
+								img.img-retina(src="/share/img/index/members_img_ichikawa.png", alt="")
 							dl
 								dt 社員猫 リズモ
 								dd 埼玉の路上出身。2012年7月1日生まれ（推定）。ノルウェージャンの血が入っている気がする。
 				div.container#service
 					div.row
 						div.col-md-12
-							h2 SERVICE
+							h2.content-headings.content-headings-center SERVICE
 					div.row
 						div.col-md-4
 							h3 PET RIBBON
@@ -163,7 +162,7 @@ html(lang="ja")
 								li
 									a(href="#" target="_blank") Go to the Site
 						div.col-md-8
-							img(src="#", alt="")
+							img.img-retina(src="/share/img/index/service_img_petribbon.png", alt="")
 					div.row
 						div.col-md-4
 							h3 ペトこと
@@ -175,7 +174,7 @@ html(lang="ja")
 								li
 									a(href="#" target="_blank") Go to the Site
 						div.col-md-8
-							img(src="#", alt="")
+							img.img-retina(src="/share/img/index/service_img_petkoto.png", alt="")
 					div.row
 						div.col-md-4
 							h3 HONEY
@@ -187,11 +186,11 @@ html(lang="ja")
 								li
 									a(href="#" target="_blank") Go to the Site
 						div.col-md-8
-							img(src="#", alt="")
+							img.img-retina(src="/share/img/index/service_img_honey.png", alt="")
 				div.container#company
 					div.row
 						div.col-md-4
-							h2 COMPANY
+							h2.content-headings.content-headings-left COMPANY
 						div.col-md-8
 							table
 								tr
@@ -216,28 +215,37 @@ html(lang="ja")
 									td 約10名（2016年8月時点）正社員以外含む
 					div.row#access
 						div.col-md-12
-							h3 ACCESS
-							div map
+							h3.reader ACCESS
+							div#map-canvas
+							div.map-link
+								ul
+									li
+										a.button(href="https://goo.gl/maps/J2cAY4hqEpQ2" target="_blank")
+											span.gicon.gicon-external
+											span Google Mapで見る
 				div.container#contact
 					div.row
 						div.col-md-4
-							h2 CONTACT
+							h2.content-headings.content-headings-right CONTACT
 						div.col-md-8
 							div form
 				div.container#news
 					div.row
 						div.col-md-12
-							h2 NEWS
+							h2.content-headings.content-headings-center NEWS
 					div.row
 						div.col-md-4
-							img(src="#", alt="")
-							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+							a(href="#")
+								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
+								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
 						div.col-md-4
-							img(src="#", alt="")
-							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+							a(href="#")
+								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
+								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
 						div.col-md-4
-							img(src="#", alt="")
-							p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+							a(href="#")
+								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
+								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
 					div.row
 						div.col-md-12
 							ul
@@ -246,43 +254,44 @@ html(lang="ja")
 				div.container#media
 					div.row
 						div.col-md-12
-							h2 MEDIA COVERAGE
+							h2.content-headings MEDIA COVERAGE
 					div.row
-						ul
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
-							li.col-md-3
-								img(src="#", alt="")
+						div.media-list
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
+							div.col-md-3.media-list-item
+								a(href="#")
+									img(src="/share/img/index/media_thumb_01.png", alt="")
 				div.container#social
 					div.row
 						ul
 							li Facebook いいね！
 							li ツイート
 		block footer
-			footer
-				div.container
-					div.row
-						div.col-md-6 facebook page plugin
-						div.col-md-6 engineer blog
-					div.row
-						div.col-md-offset-6.col-md-6
-							ul
-								li
-									a(href="#") プライバシーポリシー
-							small &copy; SYRUP, Inc.
+			include _include/footer
 		block script_body
 			include _include/script_body
+			script(src='https://maps.google.com/maps/api/js?key=AIzaSyDD4FFCb_Uw4IoWsGXZ1riQbHw6f4MGPm0')
+			script(src='/share/js/mapstyle.js')

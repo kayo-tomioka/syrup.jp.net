@@ -5,6 +5,26 @@
   margin: 0 auto;
 }
 
+// Font Size
+@mixin font-size($size) {
+  font-size: ($size / 16px) * 1rem;
+}
+%contentFamily {
+  font-family: $fontFamily;
+}
+
+// Clearfix
+%clearfix{
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: ".";
+    font-size: 0;
+  }
+}
+
 //***********************
 // Media Queries
 // 1200px : 75.000em
