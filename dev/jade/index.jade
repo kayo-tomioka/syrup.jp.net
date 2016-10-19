@@ -14,7 +14,7 @@ html(lang="ja")
 			include _include/link
 		block script_head
 			include _include/script_head
-	body.home
+	body.home#top
 		block fb
 			include _include/fb
 		block header
@@ -284,11 +284,10 @@ html(lang="ja")
 							div.col-md-3.media-list-item
 								a(href="#")
 									img(src="/share/img/index/media_thumb_01.png", alt="")
-				div.container#social
-					div.row
-						ul
-							li Facebook いいね！
-							li ツイート
+		block social_link
+			include _include/social_link
+		block pagetop
+			include _include/pagetop
 		block footer
 			include _include/footer
 		block script_body

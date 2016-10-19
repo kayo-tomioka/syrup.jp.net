@@ -6,15 +6,23 @@
 
 .navbar-brand {
 	height: auto;
-	padding-right: 0;
+	padding-right: 15px;
 }
 .navbar-brand-ci {
-	// width: 50%;
-	max-width: 220px;
-	height: auto;
+	@include mq(max-medium) {
+		width: 50%;
+	}
 }
-.navbar-fixed-top .navbar-collapse {
-	max-height: none;
+.navbar-toggle {
+	margin-top: 15px;
+}
+.navbar-fixed-top {
+	.navbar-collapse {
+		@include mq(min-medium) {
+			margin-top: 38px;
+			max-height: none;
+		}
+	}
 }
 .navbar-default {
 	.navbar-nav {
@@ -25,8 +33,54 @@
 		}
 	}
 }
-
-.nav-item {
+.header-menu-item {
 	font-family: 'intro';
 	@include font-size(20px);
+}
+
+// cbp animated header
+.cbp-af-header {
+	overflow: hidden;
+	transition: height 0.5s;
+	.navbar-brand {
+		transition: all 0.3s;
+		opacity: 1;
+	}
+	.navbar-toggle {
+		transition: all 0.3s;
+	}
+	.nav-item {
+		transition: all 0.3s;
+	}
+	&.cbp-af-header-shrink {
+		.navbar-brand {
+			visibility: hidden;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.navbar-fixed-top {
+			background-color: rgba(255, 255, 255, .6);
+			.navbar-collapse {
+				margin-top: 18px;
+			}
+		}
+		.navbar-toggle {
+			margin-top: 8px;
+		}
+	}
+}
+
+// slicknav
+
+.slicknav_menu {
+	display:none;
+}
+
+@include mq(max-medium) {
+	.js #menu {
+		display:none;
+	}
+	.js .slicknav_menu {
+		display:block;
+	}
 }

@@ -458,7 +458,6 @@ body {
   background-color: #f8f9f9; }
 
 .main {
-  padding-top: 120px;
   margin-bottom: 40px; }
 
 .container {
@@ -485,6 +484,24 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden; }
+
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%; }
+  #page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px; }
+    #page-top a:hover {
+      text-decoration: none;
+      background: #999; }
 
 /* ======================================= */
 /* footer
@@ -518,26 +535,66 @@ body {
 /* ======================================= */
 .navbar-brand {
   height: auto;
-  padding-right: 0; }
+  padding-right: 15px; }
 
-.navbar-brand-ci {
-  max-width: 220px;
-  height: auto; }
+@media (max-width: 62em) {
+  .navbar-brand-ci {
+    width: 50%; } }
 
-.navbar-fixed-top .navbar-collapse {
-  max-height: none; }
+.navbar-toggle {
+  margin-top: 15px; }
+
+@media (min-width: 62em) {
+  .navbar-fixed-top .navbar-collapse {
+    margin-top: 38px;
+    max-height: none; } }
 
 .navbar-default .navbar-nav .nav-item a {
   color: #000000; }
 
-.nav-item {
+.header-menu-item {
   font-family: 'intro';
   font-size: 1.25rem; }
 
+.cbp-af-header {
+  overflow: hidden;
+  transition: height 0.5s; }
+  .cbp-af-header .navbar-brand {
+    transition: all 0.3s;
+    opacity: 1; }
+  .cbp-af-header .navbar-toggle {
+    transition: all 0.3s; }
+  .cbp-af-header .nav-item {
+    transition: all 0.3s; }
+  .cbp-af-header.cbp-af-header-shrink .navbar-brand {
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .cbp-af-header.cbp-af-header-shrink .navbar-fixed-top {
+    background-color: rgba(255, 255, 255, 0.6); }
+    .cbp-af-header.cbp-af-header-shrink .navbar-fixed-top .navbar-collapse {
+      margin-top: 18px; }
+  .cbp-af-header.cbp-af-header-shrink .navbar-toggle {
+    margin-top: 8px; }
+
+.slicknav_menu {
+  display: none; }
+
+@media (max-width: 62em) {
+  .js #menu {
+    display: none; }
+
+  .js .slicknav_menu {
+    display: block; } }
 /* ======================================= */
 /* home
 /* ======================================= */
+@media (min-width: 62em) {
+  .home .navbar-default {
+    border: none;
+    background-color: transparent; } }
 .home .main .container {
+  padding-top: 100px;
   margin-bottom: 80px; }
   .home .main .container:last-child {
     margin-bottom: 0; }

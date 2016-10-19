@@ -14,7 +14,6 @@ body {
 }
 
 .main {
-	padding-top: 120px;
 	margin-bottom: 40px;
 }
 .container {
@@ -45,4 +44,26 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+// pagetop
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%;
+	a {
+		background: #666;
+		text-decoration: none;
+		color: #fff;
+		width: 100px;
+		padding: 30px 0;
+		text-align: center;
+		display: block;
+		border-radius: 5px;
+		&:hover{
+			text-decoration: none;
+			background: #999;
+		}
+	}
 }

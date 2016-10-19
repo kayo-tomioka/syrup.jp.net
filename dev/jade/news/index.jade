@@ -14,27 +14,17 @@ html(lang="ja")
 			include ../_include/link
 		block script_head
 			include ../_include/script_head
-	body
+	body#top
 		block fb
 			include ../_include/fb
 		block header
 			include ../_include/header
 		block main
-			div.container#social
-				ul
-					li Facebook いいね！
-					li ツイート
+		block social_link
+			include ../_include/social_link
+		block page_top
+			include ../_include/pagetop
 		block footer
-			footer
-				div.container
-					div.row
-						div.col-md-6 facebook page plugin
-						div.col-md-6 engineer blog
-					div.row
-						div.col-md-offset-6.col-md-6
-							ul
-								li
-									a(href="#") プライバシーポリシー
-							small &copy; SYRUP, Inc.
+			include ../_include/footer
 		block script_body
 			include ../_include/script_body

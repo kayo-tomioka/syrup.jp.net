@@ -10,8 +10,8 @@
     <meta property="og:url" content="http://syrup.jp.net">
     <meta property="og:image" content="">
     <meta property="og:description" content="">
-    <link rel="shortcut icon" href="/share/img/favicon.ico">
-    <link rel="stylesheet" href="/share/css/bootstrap.css">
+    <link rel="stylesheet" href="/share/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/share/css/slicknav.min.css">
     <link rel="stylesheet" href="/share/css/style.css">
     <script>
       (function(i,s,o,g,r,a,m),i[r].l=1*new Date();a=s.createElement(o),
@@ -21,7 +21,7 @@
       	ga('send', 'pageview');
     </script>
   </head>
-  <body class="home">
+  <body id="top" class="home">
     <div id="fb-root">
       <script>
         (function(d, s, id) {
@@ -34,24 +34,22 @@
       </script>
     </div>
     <header>
-      <div role="banner" class="header">
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="./" class="navbar-brand"><img src="/share/img/common/header_ci_01.png" alt="SYRUP" class="navbar-brand-ci"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a href="#about">ABOUT</a></li>
-                <li class="nav-item"><a href="#members">MEMBERS</a></li>
-                <li class="nav-item"><a href="#service">SERVICE</a></li>
-                <li class="nav-item"><a href="#company">COMPANY</a></li>
-                <li class="nav-item"><a href="#contact">CONTACT</a></li>
-                <li class="nav-item"><a href="#news">NEWS</a></li>
+      <div role="banner" class="header cbp-af-header">
+        <div role="navigation" class="container cbp-af-inner">
+          <div class="row header-nav">
+            <div class="col-md-3 header-brand"><a href="/"><img src="/share/img/common/header_ci_01.png" alt="SYRUP" class="header-brand-ci"></a></div>
+            <div class="col-md-9 header-menu">
+              <ul id="menu" class="header-menu-list">
+                <li class="header-menu-item"><a href="#about">ABOUT</a></li>
+                <li class="header-menu-item"><a href="#members">MEMBERS</a></li>
+                <li class="header-menu-item"><a href="#service">SERVICE</a></li>
+                <li class="header-menu-item"><a href="#company">COMPANY</a></li>
+                <li class="header-menu-item"><a href="#contact">CONTACT</a></li>
+                <li class="header-menu-item"><a href="#news">NEWS</a></li>
               </ul>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -295,15 +293,21 @@
           </div>
         </div>
       </div>
-      <div id="social" class="container">
-        <div class="row">
-          <ul>
-            <li>Facebook いいね！</li>
-            <li>ツイート</li>
-          </ul>
-        </div>
-      </div>
     </main>
+    <div id="social" class="container">
+      <div class="row">
+        <ul class="social-link">
+          <li class="social-link-item facebook"><script>document.write('<div class="fb-like" data-href='+location.href+' data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>');</script></li>
+          <li class="social-link-item twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <p id="page-top"><a href="#top">PAGE TOP</a></p>
+    </div>
     <footer>
       <div role="contentinfo" class="footer">
         <div class="container">
@@ -322,8 +326,44 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="/share/js/bootstrap.min.js"></script>
+    <script src="/share/js/modernizr.custom.js"></script>
+    <script src="/share/js/jquery.slicknav.min.js"></script>
+    <script src="/share/js/cbpAnimatedHeader.js"></script>
+    <script src="/share/js/classie.js"></script>
+    <script src="/share/js/jquery.smoothScroll.js"></script>
+    <script>
+      $(function() {
+      	$('#menu').slicknav({
+      		'closeOnClick': true
+      	});
+      });
+      $(function() {
+      	$('.nav-item a').SmoothScroll({
+      		duration: 1000,
+      		easing  : 'easeOutQuint'
+      	});
+      });
+      $(function() {
+      	var topBtn = $('#page-top');
+      	topBtn.hide();
+      	$(window).scroll(function () {
+      		if ($(this).scrollTop() > 100) {
+      			topBtn.fadeIn();
+      		} else {
+      			topBtn.fadeOut();
+      		}
+      	});
+      	topBtn.click(function () {
+      		$('body,html').animate({
+      			scrollTop: 0
+      		}, 500);
+      		return false;
+      	});
+      });
+    </script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyDD4FFCb_Uw4IoWsGXZ1riQbHw6f4MGPm0"></script>
     <script src="/share/js/mapstyle.js"></script>
   </body>

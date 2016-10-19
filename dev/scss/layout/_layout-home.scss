@@ -5,8 +5,15 @@
 /* ======================================= */
 
 .home {
+	.navbar-default {
+		@include mq(min-medium) {
+			border: none;
+			background-color: transparent;
+		}
+	}
 	.main {
 		.container {
+			padding-top: 100px;
 			margin-bottom: 80px;
 			&:last-child {
 				margin-bottom: 0;
@@ -93,4 +100,3 @@
 		background: url(/share/img/index/news_headings_bg_01.png) no-repeat bottom center;
 	}
 }
-
