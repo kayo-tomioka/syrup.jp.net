@@ -1,0 +1,70 @@
+doctype html
+html(lang="ja")
+	head
+		block meta
+			include ../../_include/meta
+		block title
+			title 株式会社シロップ
+			meta(name="description", content="")
+			meta(property="og:title", content="株式会社 シロップ")
+			meta(property="og:url", content="http://syrup.jp.net")
+			meta(property="og:image", content="")
+			meta(property="og:description", content="")
+			meta(property="fb:app_id", content="1823522501226325")
+		block links
+			include ../../_include/link
+		block script_head
+			include ../../_include/script_head
+	body.news#top
+		block fb
+			include ../../_include/fb
+		block header
+			include ../../_include/header
+		block main
+			main.main
+				div.container
+					div.row
+						div.col-md-12
+							h1.content-headings NEWS
+								span.news-year YYYY
+				div.container
+					div.row
+						div.col-md-12.news-articles
+							h1.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+					div.row
+						div.col-md-12.news-detail
+							time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+							div.news-detail-item
+								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+							div.news-detail-item
+								div.news-image
+									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
+					div.row.news-archive
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+						div.col-md-3.news-archive-item
+							a(href="/news/yyyy/") YYYY年
+		block social_link
+			include ../../_include/social_link
+		block page_top
+			include ../../_include/pagetop
+		block footer
+			include ../../_include/footer
+		block script_body
+			include ../../_include/script_body

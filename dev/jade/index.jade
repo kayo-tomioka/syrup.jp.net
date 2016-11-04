@@ -216,13 +216,14 @@ html(lang="ja")
 					div.row#access
 						div.col-md-12
 							h3.reader ACCESS
-							div#map-canvas
-							div.map-link
-								ul
-									li
-										a.button(href="https://goo.gl/maps/J2cAY4hqEpQ2" target="_blank")
-											span.gicon.gicon-external
-											span Google Mapで見る
+							div.map-item
+								div#map-canvas
+								div.map-link
+									ul
+										li
+											a.button(href="https://goo.gl/maps/J2cAY4hqEpQ2" target="_blank")
+												span.gicon.gicon-external
+												span Google Mapで見る
 				div.container#contact
 					div.row
 						div.col-md-4
@@ -234,18 +235,24 @@ html(lang="ja")
 						div.col-md-12
 							h2.content-headings.content-headings-center NEWS
 					div.row
-						div.col-md-4
+						div.col-md-4.news-articles
 							a(href="#")
-								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
-								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
-						div.col-md-4
+								div.col-md-12.col-xs-4
+									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-12.col-xs-8
+									p.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+						div.col-md-4.news-articles
 							a(href="#")
-								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
-								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
-						div.col-md-4
+								div.col-md-12.col-xs-4
+									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-12.col-xs-8
+									p.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+						div.col-md-4.news-articles
 							a(href="#")
-								img.img-retina(src="/share/img/news/share_thumb_syrup.png", alt="")
-								p ニュースの見出しを表示 ニュースの見出しを表示 ニュースの見出しを表示
+								div.col-md-12.col-xs-4
+									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-12.col-xs-8
+									p.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
 					div.row
 						div.col-md-12
 							ul
@@ -292,5 +299,5 @@ html(lang="ja")
 			include _include/footer
 		block script_body
 			include _include/script_body
-			script(src='https://maps.google.com/maps/api/js?key=AIzaSyDD4FFCb_Uw4IoWsGXZ1riQbHw6f4MGPm0')
+			script(src='https://maps.google.com/maps/api/js?key=AIzaSyAWyJzOIW0qC423PFa81Ii4D5u0oXI_9Oc')
 			script(src='/share/js/mapstyle.js')

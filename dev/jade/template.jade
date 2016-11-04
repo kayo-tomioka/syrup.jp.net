@@ -2,9 +2,7 @@ doctype html
 html(lang="ja")
 	head
 		block meta
-			meta(charset="utf-8")
-			meta(http-equiv="X-UA-Compatible", content="IE=edge")
-			meta(name="viewport" content="width=device-width, initial-scale=1")
+			include _include/meta
 		block title
 			title 株式会社シロップ
 			meta(name="description", content="")
@@ -12,112 +10,24 @@ html(lang="ja")
 			meta(property="og:url", content="http://syrup.jp.net")
 			meta(property="og:image", content="")
 			meta(property="og:description", content="")
+			meta(property="fb:app_id", content="1823522501226325")
 		block links
-			//- link(rel="shortcut icon" href="/share/img/favicon.ico")
-			link(rel="stylesheet", href="/share/css/bootstrap.min.css")
-			link(rel="stylesheet", href="/share/css/style.css")
+			include _include/link
 		block script_head
 			include _include/script_head
 	body.home#top
 		block fb
-			div#fb-root
-				script.
-					(function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) return;
-						js = d.createElement(s); js.id = id;
-						js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=259305614095767";
-						fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
+			include _include/fb
 		block header
-			header.header.cbp-af-header
-				div.container.cbp-af-inner
-					div.row.header-nav(role="banner")
-						div.col-md-3.header-brand
-							a(href="/")
-								img.header-brand-ci(src="/share/img/common/header_ci_01.png" alt="SYRUP")
-						div.col-md-9.header-menu#menu(role="navigation")
-							ul.header-menu-list
-								li.header-menu-item
-									a(href="#about") ABOUT
-								li.header-menu-item
-									a(href="#members") MEMBERS
-								li.header-menu-item
-									a(href="#service") SERVICE
-								li.header-menu-item
-									a(href="#company") COMPANY
-								li.header-menu-item
-									a(href="#contact") CONTACT
-								li.header-menu-item
-									a(href="#news") NEWS
+			include _include/header
 		block main
 			main.main
-				div.container(style="height:500px;")
-					p test
+				div.container(style="height: 800px;")
 		block social_link
-			div.container#social
-				div.row
-					ul.social-link
-						li.social-link-item.facebook
-							<script>document.write('<div class="fb-like" data-href='+location.href+' data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>');</script>
-						li.social-link-item.twitter
-							<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			include _include/social_link
 		block page_top
-			div.patetop#page-top
-				a(href="#top") PAGE TOP
+			include _include/pagetop
 		block footer
-			footer
-				div.footer(role="contentinfo")
-					div.container
-						div.row
-							div.col-md-6
-								| <div class="fb-page" data-href="https://www.facebook.com/syrupforpets/" data-tabs="timeline" data-width="500" data-height="215" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/syrupforpets/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/syrupforpets/">株式会社シロップ</a></blockquote></div>
-							div.col-md-6
-								a(href="#", target="_blank")
-									img.img-retina(src="/share/img/common/footer_bnr_01.png" alt="engineer blog")
-						div.row.footer-link-wrap
-							div.col-md-offset-8.col-md-2
-								ul.footer-link
-									li.footer-link-item
-										a(href="#") プライバシーポリシー
-							div.col-md-2
-								small.copyright &copy; SYRUP, Inc.
+			include _include/footer
 		block script_body
-			script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-			script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
-			script(src='/share/js/bootstrap.min.js')
-			script(src='/share/js/modernizr.custom.js')
-			script(src="/share/js/jquery.slicknav.min.js")
-			script(src='/share/js/cbpAnimatedHeader.js')
-			script(src='/share/js/classie.js')
-			script(src="/share/js/jquery.smoothScroll.js")
-			script.
-				$(function() {
-					$('#menu').slicknav({
-						'closeOnClick': true
-					});
-				});
-				$(function() {
-					$('.nav-item a').SmoothScroll({
-						duration: 1000,
-						easing  : 'easeOutQuint'
-					});
-				});
-				$(function() {
-					var topBtn = $('#page-top');
-					topBtn.hide();
-					$(window).scroll(function () {
-						if ($(this).scrollTop() > 100) {
-							topBtn.fadeIn();
-						} else {
-							topBtn.fadeOut();
-						}
-					});
-					topBtn.click(function () {
-						$('body,html').animate({
-							scrollTop: 0
-						}, 500);
-						return false;
-					});
-				});
+			include _include/script_body

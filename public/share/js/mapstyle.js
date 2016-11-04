@@ -3,7 +3,7 @@ function initialize() {
 	$("#access").addClass("google-map");
 	$(".map-img").addClass("hidden");
 
-	var latlng = new google.maps.LatLng(35.655040, 139.715006);
+	var latlng = new google.maps.LatLng(35.655087, 139.715007);
 	var myOptions = {
 		zoom: 17,
 		center: latlng,
@@ -15,20 +15,20 @@ function initialize() {
 			style: google.maps.ZoomControlStyle.SMALL,
 			position: google.maps.ControlPosition.LEFT_TOP
 		},
-	mapTypeControlOptions: { mapTypeIds: ['jvrs', google.maps.MapTypeId.ROADMAP] }
+	mapTypeControlOptions: { mapTypeIds: ['syrup', google.maps.MapTypeId.ROADMAP] }
 	};
 	var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
 
 	var icon = {
-		url: '/01/share/img/icon_map_01.png',
-		scaledSize: new google.maps.Size(50, 78)
+		url: '/share/img/index/company_icon_mapflag.png',
+		scaledSize: new google.maps.Size(112, 81)
 	}
 
 	var markerOptions = {
 		position: latlng,
 		map: map,
 		icon: icon,
-		title: 'ロイヤルパークホテル'
+		title: '株式会社 シロップ'
 	};
 	var marker = new google.maps.Marker(markerOptions);
 
@@ -69,10 +69,10 @@ function initialize() {
 			]
 		}
 	];
-	var styledMapOptions = {name: 'ロイヤルパークホテル'}
-	var jvrsType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
-	map.mapTypes.set('jvrs', jvrsType);
-	map.setMapTypeId('jvrs');
+	var styledMapOptions = {name: '株式会社 シロップ'}
+	var syrupType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+	map.mapTypes.set('syrup', syrupType);
+	map.setMapTypeId('syrup');
 
 	google.maps.event.addDomListener(window, "resize", function () {
 		var center = map.getCenter();

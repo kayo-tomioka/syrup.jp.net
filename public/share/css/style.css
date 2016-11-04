@@ -5,6 +5,14 @@
   max-width: 1020px;
   margin: 0 auto; }
 
+#news .news-articles:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ".";
+  font-size: 0; }
+
 /*! normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -458,8 +466,11 @@ body {
   background-color: #f8f9f9; }
 
 .main {
-  padding-top: 100px;
+  padding-top: 130px;
   margin-bottom: 40px; }
+  @media (max-width: 62em) {
+    .main {
+      padding-top: 55px; } }
 
 .container {
   font-size: 1rem; }
@@ -468,7 +479,7 @@ body {
       width: 100%; } }
 
 .content-headings {
-  margin: 0;
+  margin: 50px 0 40px;
   font-family: 'intro';
   font-size: 3rem; }
 
@@ -485,6 +496,25 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden; }
+
+.social-link {
+  margin: 80px 0 40px;
+  padding: 0;
+  list-style-type: none;
+  text-align: center; }
+  .social-link .social-link-item {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 7px;
+    height: 20px; }
+    .social-link .social-link-item iframe {
+      margin: 0 !important; }
+    .social-link .social-link-item.facebook {
+      margin-left: 0; }
+      .social-link .social-link-item.facebook .fb_iframe_widget > span {
+        vertical-align: baseline !important; }
+    .social-link .social-link-item.twitter {
+      margin-right: 0; }
 
 #page-top {
   position: fixed;
@@ -503,6 +533,50 @@ body {
     #page-top a:hover {
       text-decoration: none;
       background: #999; }
+
+.news-year {
+  margin-left: 16px;
+  font-size: 1.75rem; }
+
+.news-articles {
+  margin-top: 50px; }
+  .news-articles:first-child {
+    margin-top: 0; }
+  .news-articles .news-date {
+    display: block; }
+  .news-articles .news-title {
+    display: block; }
+  .news-articles .news-description {
+    display: block; }
+  .news-articles a:hover .news-date {
+    text-decoration: underline; }
+  .news-articles a:hover .news-title {
+    text-decoration: underline; }
+  .news-articles a:hover .news-description {
+    text-decoration: underline; }
+  .news-articles a:hover .news-image-item {
+    opacity: .8; }
+
+.news-image-item {
+  width: 100%;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2); }
+
+.news-archive {
+  margin-top: 40px; }
+  .news-archive .news-archive-item {
+    margin-top: 30px; }
+    @media (max-width: 62em) {
+      .news-archive .news-archive-item {
+        margin-top: 15px; } }
+    .news-archive .news-archive-item a {
+      display: block;
+      padding: 12px;
+      color: #ffffff;
+      background-color: #000000;
+      text-align: center; }
+      .news-archive .news-archive-item a:hover {
+        text-decoration: none;
+        opacity: .8; }
 
 /* ======================================= */
 /* footer
@@ -539,6 +613,9 @@ body {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 10000; }
+  @media (min-width: 62em) {
+    .header {
+      padding-top: 29px; } }
 
 .header-nav {
   position: relative; }
@@ -547,12 +624,17 @@ body {
   height: auto;
   padding-top: 10px;
   padding-right: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 20px; }
   @media (max-width: 62em) {
     .header-brand {
       position: absolute;
       top: 0;
       left: 0; } }
+
+@media (min-width: 62em) {
+  .header-brand-ci {
+    width: 221px;
+    height: 71px; } }
 
 .header-menu-list {
   margin-top: 28px;
@@ -572,7 +654,7 @@ body {
     .header-menu-list .header-menu-item a {
       color: #333333;
       display: inline-block;
-      padding: 15px 10px 17px; }
+      padding: 15px 10px 26px; }
       .header-menu-list .header-menu-item a:hover {
         border-bottom: 3px solid #000;
         text-decoration: none; }
@@ -583,10 +665,14 @@ body {
   min-height: 56px; }
   .cbp-af-header .header-brand {
     transition: all 0.5s; }
+  .cbp-af-header .header-brand-ci {
+    transition: all 0.5s; }
   .cbp-af-header .header-menu-list {
     transition: all 0.5s; }
   .cbp-af-header .header-menu-item {
     transition: all 0.5s; }
+  .cbp-af-header.cbp-af-header-shrink.header {
+    padding-top: 0; }
   .cbp-af-header.cbp-af-header-shrink .header-brand {
     padding-top: 0;
     padding-bottom: 0; }
@@ -596,7 +682,7 @@ body {
       .cbp-af-header.cbp-af-header-shrink .header-brand-ci {
         display: block; } }
   .cbp-af-header.cbp-af-header-shrink .header-menu-list {
-    margin-top: 0 !important; }
+    margin-top: 5px !important; }
   .cbp-af-header.cbp-af-header-shrink .header-menu-item a {
     padding-bottom: 10px; }
 
@@ -622,8 +708,8 @@ body {
 .slicknav_btn {
   position: relative;
   display: inline-block;
-  margin-top: 3px;
-  margin-right: 3px;
+  margin-top: 5px;
+  margin-right: 5px;
   width: 28px;
   height: 30px;
   transition: all .4s;
@@ -703,6 +789,7 @@ body {
     margin-bottom: 0; }
 .home .content-headings {
   text-align: center;
+  margin: 0;
   padding-bottom: 40px; }
 .home .content-headings-center {
   margin-bottom: 60px; }
@@ -735,6 +822,45 @@ body {
 #company .content-headings {
   padding-bottom: 50px;
   background: url(/share/img/index/company_headings_bg_01.png) no-repeat bottom center; }
+#company .map-img:hidden {
+  display: none; }
+#company .map-item {
+  position: relative;
+  margin-top: 26px;
+  padding-top: 50%; }
+  @media (max-width: 62em) {
+    #company .map-item {
+      margin-bottom: 80px; } }
+  #company .map-item #map-canvas {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 520px; }
+    @media (max-width: 62em) {
+      #company .map-item #map-canvas {
+        min-height: 250px; } }
+  @media (max-width: 62em) {
+    #company .map-item .map-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      background-color: rgba(0, 0, 0, 0.6); } }
+  #company .map-item .map-link ul {
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+    z-index: 20; }
+    @media (max-width: 62em) {
+      #company .map-item .map-link ul {
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        right: auto;
+        text-align: center; } }
 
 #contact .content-headings {
   padding-bottom: 50px;
@@ -742,3 +868,12 @@ body {
 
 #news .content-headings {
   background: url(/share/img/index/news_headings_bg_01.png) no-repeat bottom center; }
+#news .news-articles {
+  margin-bottom: 30px; }
+  @media (min-width: 62em) {
+    #news .news-articles {
+      margin-top: 0;
+      margin-bottom: 0; } }
+@media (min-width: 62em) {
+  #news .news-title {
+    margin-top: 18px; } }

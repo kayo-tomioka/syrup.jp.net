@@ -7,6 +7,9 @@
 .header {
 	position: fixed;
 	width: 100%;
+  @include mq(min-medium) {
+    padding-top: 29px;
+  }
 	background-color: rgba(255, 255, 255, .6);
 	z-index: 10000;
 }
@@ -17,12 +20,18 @@
 	height: auto;
 	padding-top: 10px;
 	padding-right: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	@include mq(max-medium) {
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
+}
+.header-brand-ci {
+  @include mq(min-medium) {
+    width: 221px;
+    height: 71px;
+  }
 }
 .header-menu-list {
 	margin-top: 28px;
@@ -42,7 +51,7 @@
 		a {
 			color: #333333;
 			display: inline-block;
-			padding: 15px 10px 17px;
+			padding: 15px 10px 26px;
 			&:hover {
 				border-bottom: 3px solid #000;
 				text-decoration: none;
@@ -50,7 +59,6 @@
 		}
 	}
 }
-
 
 // cbp animated header
 .cbp-af-header {
@@ -60,6 +68,9 @@
 	.header-brand {
 		transition: all 0.5s;
 	}
+  .header-brand-ci {
+    transition: all 0.5s;
+  }
 	.header-menu-list {
 		transition: all 0.5s;
 	}
@@ -67,6 +78,9 @@
 		transition: all 0.5s;
 	}
 	&.cbp-af-header-shrink {
+    &.header {
+      padding-top: 0;
+    }
 		.header-brand {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -78,7 +92,7 @@
       }
 		}
 		.header-menu-list {
-			margin-top: 0!important;
+			margin-top: 5px!important;
 		}
 		.header-menu-item {
 			a {
@@ -113,8 +127,8 @@
 .slicknav_btn {
   position: relative;
   display: inline-block;
-  margin-top: 3px;
-  margin-right: 3px;
+  margin-top: 5px;
+  margin-right: 5px;
   width: 28px;
   height: 30px;
   transition: all .4s;
