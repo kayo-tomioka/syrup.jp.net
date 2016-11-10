@@ -229,7 +229,33 @@ html(lang="ja")
 						div.col-md-4
 							h2.content-headings.content-headings-right CONTACT
 						div.col-md-8
-							div form
+							form
+								div.contact-item-wrap
+									table
+										tr.contact-item
+											th
+												label(for="contact-name") Name
+											td
+												input(type="text" id="contact-name")
+										tr.contact-item
+											th
+												label(for="contact-mail") Mail
+											td
+												input(type="text" id="contact-mail")
+										tr.contact-item
+											th
+												label(for="contact-subject") Subject
+											td
+												input(type="text" id="contact-subject")
+										tr
+											th(colspan="2", scope="col")
+												label(for="contact-message") Message
+										tr.contact-item
+											td(colspan="2")
+												textarea(id="contact-message")
+								button.contact-submit(type="submit")
+									span.gicon.gicon-next
+									span Send
 				div.container#news
 					div.row
 						div.col-md-12

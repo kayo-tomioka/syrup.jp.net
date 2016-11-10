@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* ======================================= */
+/* icon
+/* ======================================= */
+
+.gicon {
+	font-family: Genericons;
+	margin-right: 5px;
+	vertical-align: middle;
+	position: static;
+	display: inline;
+	//Social
+	&.gicon-social {
+		color: $colorBase;
+		@include font-size(32px);
+	}
+	&.gicon-twitter:before {
+		content: '\f202';
+	}
+	&.gicon-facebook:before {
+		content: '\f204';
+	}
+	//External
+	&.gicon-external:before {
+		content: '\f442';
+	}
+	//Mail
+	&.gicon-mail:before {
+		content: '\f410';
+	}
+	//More
+	&.gicon-more:before {
+		content: '\f429';
+	}
+	//Tag
+	&.gicon-tag:before {
+		content: '\f302';
+	}
+	//Next
+	&.gicon-next:before {
+		content: '\f429';
+	}
+}
