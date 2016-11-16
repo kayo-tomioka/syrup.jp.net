@@ -34,7 +34,7 @@
   }
 }
 .header-menu-list {
-	margin-top: 28px;
+	margin-top: 30px;
 	margin-bottom: 0;
 	padding-left: 0;
 	@include mq(min-medium) {
@@ -43,15 +43,16 @@
 	}
 	.header-menu-item {
 		list-style-type: none;
-		font-family: 'intro';
-		@include font-size(20px);
+		@include font-size(18px);
+    font-weight: bold;
 		@include mq(min-medium) {
 			display: table-cell;
 		}
 		a {
 			color: #333333;
 			display: inline-block;
-			padding: 15px 10px 26px;
+			padding: 15px 10px 28px;
+      font-weight: bold;
 			&:hover {
 				border-bottom: 3px solid #000;
 				text-decoration: none;
@@ -64,7 +65,7 @@
 .cbp-af-header {
 	overflow: hidden;
 	transition: height 0.5s;
-	min-height: 56px;
+	min-height: 58px;
 	.header-brand {
 		transition: all 0.5s;
 	}

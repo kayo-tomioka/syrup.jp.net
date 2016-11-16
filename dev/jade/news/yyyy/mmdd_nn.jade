@@ -15,50 +15,52 @@ html(lang="ja")
 			include ../../_include/link
 		block script_head
 			include ../../_include/script_head
-	body.news#top
+	body.news.news-articles#top
 		block fb
 			include ../../_include/fb
 		block header
 			include ../../_include/header
 		block main
 			main.main
+				article
+					div.container
+						div.row
+							div.col-md-12
+								h1.content-headings NEWS
+									span.news-year YYYY
+					div.container
+						div.row
+							div.col-md-12
+								h1.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+						div.row
+							div.col-md-12.news-detail
+								time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+								div.news-detail-item
+									p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+									p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+									p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+									p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+									p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+								div.news-detail-item
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
 				div.container
-					div.row
-						div.col-md-12
-							h1.content-headings NEWS
-								span.news-year YYYY
-				div.container
-					div.row
-						div.col-md-12.news-articles
-							h1.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-					div.row
-						div.col-md-12.news-detail
-							time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-							div.news-detail-item
-								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-								p 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-							div.news-detail-item
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-					div.row.news-archive
-						div.col-md-3.news-archive-item
+					ul.row.news-archive
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
-						div.col-md-3.news-archive-item
+						li
 							a(href="/news/yyyy/") YYYY年
 		block social_link
 			include ../../_include/social_link

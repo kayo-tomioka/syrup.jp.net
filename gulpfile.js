@@ -27,16 +27,16 @@ var paths = {
   'htmlDest'  : 'public/',
   'htmlFiles' : 'dev/*.html',
 // images
-  'imgDest'   : 'public/share/img',
+  'imgDest'   : 'public/img',
   'imgDir'    : 'dev/img',
 // js
-  'jsDest'    : 'public/share/js',
+  'jsDest'    : 'public/js',
   'jsFiles'   : 'dev/js/**/*.js',
 // scss
   'scssDest'  : 'dev/scss',
   'scssFiles' : 'dev/scss/**/*.scss',
 // css
-  'cssDest'   : 'public/share/css',
+  'cssDest'   : 'public/css',
 // scss
   'jadeDest'  : 'public/',
   'jadeFiles' : 'dev/jade/**/*.jade'

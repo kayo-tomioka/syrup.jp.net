@@ -8,7 +8,7 @@ html(lang="ja")
 			meta(name="description", content="")
 			meta(property="og:title", content="株式会社 シロップ")
 			meta(property="og:url", content="http://syrup.jp.net")
-			meta(property="og:image", content="")
+			meta(property="og:image", content="/img/common/ogimage.png")
 			meta(property="og:description", content="")
 			meta(property="fb:app_id", content="1823522501226325")
 		block links
@@ -28,61 +28,66 @@ html(lang="ja")
 							h1.content-headings NEWS
 								span.news-year YYYY
 				div.container
-					div.row.news-articles
-						a(href="#")
-							div.col-md-3.col-xs-4
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-							div.col-md-9.col-xs-8
-								div.news-item
-									p.news-item-inner
-										time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-										span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-										span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-					div.row.news-articles
-						a(href="#")
-							div.col-md-3.col-xs-4
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-							div.col-md-9.col-xs-8
-								div.news-item
-									p.news-item-inner
-										time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-										span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-										span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-					div.row.news-articles
-						a(href="#")
-							div.col-md-3.col-xs-4
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-							div.col-md-9.col-xs-8
-								div.news-item
-									p.news-item-inner
-										time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-										span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-										span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-					div.row.news-articles
-						a(href="#")
-							div.col-md-3.col-xs-4
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-							div.col-md-9.col-xs-8
-								div.news-item
-									p.news-item-inner
-										time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-										span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-										span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
-					div.row.news-articles
-						a(href="#")
-							div.col-md-3.col-xs-4
-								div.news-image
-									img.img-retina.news-image-item(src="/share/img/news/share_thumb_syrup.png", alt="")
-							div.col-md-9.col-xs-8
-								div.news-item
-									p.news-item-inner
-										time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
-										span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
-										span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+					div.row
+						div.news-articles-item
+							a(href="#")
+								div.col-md-3.col-xs-4
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-9.col-xs-8
+									div.news-item
+										p.news-item-inner
+											time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+											span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+											span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+					div.row
+						div.news-articles-item
+							a(href="#")
+								div.col-md-3.col-xs-4
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-9.col-xs-8
+									div.news-item
+										p.news-item-inner
+											time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+											span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+											span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+					div.row
+						div.news-articles-item
+							a(href="#")
+								div.col-md-3.col-xs-4
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-9.col-xs-8
+									div.news-item
+										p.news-item-inner
+											time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+											span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+											span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+					div.row
+						div.news-articles-item
+							a(href="#")
+								div.col-md-3.col-xs-4
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-9.col-xs-8
+									div.news-item
+										p.news-item-inner
+											time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+											span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+											span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
+					div.row
+						div.news-articles-item
+							a(href="#")
+								div.col-md-3.col-xs-4
+									div.news-image
+										img.img-retina.news-image-item.img-shodow(src="/img/news/share_thumb_syrup.png", alt="")
+								div.col-md-9.col-xs-8
+									div.news-item
+										p.news-item-inner
+											time.news-date(datetime="YYYY-MM-DD") YYYY/MM/DD
+											span.news-title 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります 記事タイトルが入ります
+											span.news-description 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります 記事詳細が入ります
 		block social_link
 			include ../_include/social_link
 		block page_top

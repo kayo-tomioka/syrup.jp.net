@@ -5,7 +5,7 @@
 /* ======================================= */
 .footer {
 	padding-top: 40px;
-	padding-bottom: 150px;
+	padding-bottom: 100px;
 	background-color: #080505;
 }
 .footer-link-wrap {
@@ -14,6 +14,9 @@
 		padding-left: 0;
 		text-align: right;
 		@include font-size(14px);
+		@include mq(max-medium) {
+			text-align: center;
+		}
 	}
 }
 .footer-link {
