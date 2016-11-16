@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="container">
-          <?php get_template_part('loop', 'main')?>
+          <?php the_content(); ?>
         </div>
       </article>
       <?php

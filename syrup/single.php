@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php if(!is_home()){wp_title('-', true, 'right');}bloginfo('name')?></title>
-    <meta property="og:title" content="<?php if(!is_home()){wp_title('-', true, 'right');}bloginfo('name')?>">
-    <meta property="og:url" content="http://syrup.jp.net">
-    <meta property="og:image" content="<?php echo get_template_directory_uri();?>/img/common/ogimage.png">
-    <meta property="og:description" content="<?php bloginfo('description');?>">
     <meta property="fb:app_id" content="1823522501226325">
     <link rel="icon" href="<?php echo get_template_directory_uri();?>/img/common/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/img/common/apple-touch-icon.png" sizes="180x180">
