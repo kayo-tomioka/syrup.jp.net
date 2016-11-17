@@ -587,7 +587,7 @@ body {
       display: block;
       padding: 12px;
       color: #ffffff;
-      background-color: #000000;
+      background: url(../img/index/contact_form_bg_02.png) repeat top left;
       text-align: center; }
       .news-archive li a:hover {
         text-decoration: none;
@@ -638,6 +638,10 @@ body {
 .copyright {
   color: #ffffff;
   font-size: 0.875rem; }
+  @media (max-width: 62em) {
+    .copyright {
+      display: block;
+      margin-top: 10px; } }
 
 /* ======================================= */
 /* header
@@ -684,7 +688,8 @@ body {
     font-weight: bold; }
     @media (min-width: 62em) {
       .header-menu-list .header-menu-item {
-        display: table-cell; } }
+        display: table-cell;
+        text-align: center; } }
     .header-menu-list .header-menu-item a {
       color: #333333;
       display: inline-block;
@@ -825,12 +830,13 @@ body {
 .home .content-headings {
   text-align: center;
   margin: 0;
-  padding-bottom: 40px; }
+  padding-bottom: 45px; }
   @media (max-width: 62em) {
     .home .content-headings {
       font-size: 2.375rem; } }
 .home .content-headings-center {
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  line-height: 1; }
   @media (min-width: 62em) {
     .home .content-headings-center:before {
       margin-right: 27px;
@@ -1159,11 +1165,12 @@ body {
   margin-bottom: 13px; }
 #contact .required-item {
   margin-top: 10px;
-  color: #d8271c;
   font-size: 0.75rem; }
-@media (max-width: 62em) {
-  #contact .contact-submit {
-    float: right; } }
+#contact .contact-submit {
+  font-family: "Montserrat", "Open Sans", "YuGothic", "游ゴシック", "メイリオ", "ＭＳ Ｐゴシック", sans-serif; }
+  @media (max-width: 62em) {
+    #contact .contact-submit {
+      float: right; } }
 
 #news .content-headings {
   background: url(../img/index/news_headings_bg_01.png) no-repeat bottom center; }

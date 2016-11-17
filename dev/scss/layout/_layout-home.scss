@@ -21,7 +21,7 @@
 	.content-headings {
 		text-align: center;
 		margin: 0;
-		padding-bottom: 40px;
+		padding-bottom: 45px;
 		@include mq(max-medium) {
 			@include font-size(38px);
 		}
@@ -30,6 +30,7 @@
 	}
 	.content-headings-center {
 		margin-bottom: 60px;
+		line-height: 1;
 		@include mq(min-medium) {
 			&:before {
 				margin-right: 27px;
@@ -495,10 +496,10 @@
 	}
 	.required-item {
 		margin-top: 10px;
-		color: #d8271c;
 		@include font-size(12px);
 	}
 	.contact-submit {
+		font-family: $fontFamily;
 		@include mq(max-medium) {
 			float: right;
 		}

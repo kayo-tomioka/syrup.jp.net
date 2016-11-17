@@ -47,6 +47,7 @@
     font-weight: bold;
 		@include mq(min-medium) {
 			display: table-cell;
+      text-align: center;
 		}
 		a {
 			color: #333333;
